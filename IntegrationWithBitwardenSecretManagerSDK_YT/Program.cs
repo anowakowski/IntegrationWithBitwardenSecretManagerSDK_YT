@@ -16,7 +16,7 @@ var serviceCollection = new ServiceCollection()
 
 var service = serviceCollection.GetService<ISecretService>();
 
-var result = service.GetSecretValue("API_KEY2", "testowy projekt");
+var result = service.GetSecretValue("API_KEY", "testowy projekt");
 
 Console.WriteLine(result.IsError ? $"Error during getSecretValue from bitwarden Secure Manager: {result.ErrorMessage}" : $"Your secret value for key \"API_KEY\" is {result.SecretValue}" );
 Console.WriteLine("Press any key to close");
